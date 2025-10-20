@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página principal</title>
+</head>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:  Helvetica, sans-serif, Arial;
+    background: linear-gradient(135deg, #95a7f8 0%, #b1e6f0 100%);
+    color: #010203;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+header{
+    background-color: #8ad4ff;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 17px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+header h1{
+   font-size: 2.5em;
+   margin-bottom: 10px;
+}
+
+.content {
+    padding: 40px;
+}
+
+.intro{
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    border-left: 5px solid #00cfff;
+
+}
+
+.intro h2{
+    margin-bottom: 15px;
+    text-align: center;
+    color: #010203;
+}
+
+.exercise-grid{
+    display: inline-block;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.exercise-card{
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #53c5ec;
+    transition: all 0.3 ease;
+    margin: 20px;
+}
+
+.exercise-card:hover{
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+    border-color: #00bfff;
+}
+
+.exercise-card h2{
+    margin-bottom: 15px;
+    color: #010203;
+    text-align: center;
+}
+
+a{
+    /* text-decoration: underline  ; */
+    color: #010203;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    background: #8ad4ff;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-size: 14px;
+    margin-top: 40px;
+}
+</style>
+<body>
+   
+    <header>
+        <h1>FlexBox vínculos</h1>
+       <p>Enlaces a los 5 archivos + explicaciones y mini-demostraciones. Practica abriendo cada archivo.</p>
+    </header>
+
+    <div class="content">
+        <div class="intro">
+            <h2>¿Qué es Flexbox?</h2>
+            <p>Flexbox (Flexible Box Layout) es un modelo de diseño CSS que permite crear layouts flexibles y eficientes sin usar floats o positioning. Facilita la distribución del espacio y la alineación de elementos, incluso cuando sus tamaños son desconocidos o dinámicos.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="exercise-grid">
+            <div class="exercise-card">
+                <h2>Ejes y Direcciones</h2>
+                <p><strong>Mi explicación:</strong> El primero es el eje principal, que define hacia dónde se colocan los elementos dentro del contenedor, y se controla con la propiedad flex-direction.
+                Puede ser en forma de fila (row), columna (column), o en orden inverso (row-reverse, column-reverse).</p>
+                <br>
+
+                    <p><strong>Cómo influye:</strong> Transforma instantáneamente un contenedor normal en uno flexible, haciendo que todos sus hijos se acomoden en una fila por defecto y permitiendo usar todas las demás propiedades de Flexbox.</p> <br>
+                    
+                <a href="flexbox1.html"> <b> Archivo 1:</b> Ejes y Direcciones</a>
+            </div>
+        
+        
+    
+            <div class="exercise-card">
+                <h2>Alineación de elementos</h2>
+                <p><strong>Mi explicación:</strong> Flexbox permite la alineacion de elementos dentro del contenedor y en esta hay dos propiedades importantes que son: <code>Justify-content</code> que sirve para alinear los elementos en el eje principal. Por ejemplo, se pueden colocar al inicio, al centro o al final. También se pueden repartir con espacios iguales entre ellos <code>(space-between, space-around, space-evenly). </code> </p>
+                <br>
+
+                <p><strong>Cómo influye:</strong> Me permite crear espacios perfectos entre elementos sin calcular márgenes manualmente. Con <em>space-between</em> hago que el primer elemento esté pegado a la izquierda y el último a la derecha automáticamente. ¡Adiós a los márgenes complicados!</p>
+                <br>
+                    
+                <a href="flexbox2.html"><b>Archivo 2:</b> Alineación de elementos</a>
+            </div>
+        
+
+        
+            <div class="exercise-card">
+                <h2>Alineación de elementos multilínea</h2>
+                <p><strong>Mi explicación:</strong> Cuando el espacio no alcanza para poner todos los elementos en una sola línea, se puede usar la propiedad flex-wrap, que hace que los elementos se acomoden en varias líneas.
+                Después, con la propiedad align-content, se controla cómo se distribuyen esas líneas completas dentro del contenedor.</p>
+                <br>
+
+                <p><strong>Cómo influye:</strong> Hace que mis diseños sean verdaderamente responsivos. En una pantalla grande tengo 5 elementos en una fila, en el celular se reorganizan solos en 2 o 3 filas. El navegador hace todo el trabajo de decidir cuándo "envolver" los elementos a la siguiente línea, también me da control sobre el espacio vertical cuando tengo varias filas. Puedo hacer que las filas estén pegadas arriba, centradas verticalmente, o distribuidas uniformemente.</p>
+                <br>
+
+                <a href="flexbox3.html"><b>Archivo 3:</b> Alineación de elementos multilínea</a>
+            </div>
+
+        
+        
+            <div class="exercise-card">
+                <h2> Alineación individual</h2>
+                <p><strong>Mi explicación:</strong> A veces queremos que un solo elemento esté alineado de forma diferente al resto.
+                Para eso se usa align-self, que permite modificar la posición de un elemento en el eje transversal sin afectar a los demás.
+                Por ejemplo, si todos los elementos están centrados, pero quieres que uno de ellos se coloque abajo, puedes usar align-self: flex-end; solo en ese elemento.</p>
+                <br>
+
+                <p><strong>Cómo influye:</strong> Esto da más control y flexibilidad al diseño, porque cada componente puede tener su propio comportamiento. Puedo tener un logo centrado mientras otros elementos están alineados arriba, o hacer que un botón de "Enviar" esté en una posición especial sin crear un contenedor separado.</p>
+                <br>
+
+                <a href="flexbox4.html"><b>Archivo 4:</b> Alineación individual</a>
+            </div>
+
+            <div class="exercise-card">
+                <h2> Propiedades de los elementos hijos</h2>
+                <p><strong>Mi explicación:</strong> permite controlar cómo cada elemento hijo se adapta al espacio disponible dentro del contenedor.
+                Las propiedades principales son:
+                flex-grow: define cuánto puede crecer un elemento si hay espacio libre.
+                flex-shrink: define cuánto puede reducirse si el espacio es pequeño.
+                flex-basis: establece el tamaño base del elemento antes de repartir el espacio.</p>
+                <br>
+
+                <p><strong>Cómo influye:</strong> Me permite crear layouts fluidos donde unos elementos son más importantes que otros. Por ejemplo, en un layout de 3 columnas, puedo hacer que la columna central (el contenido) crezca y ocupe todo el espacio disponible, mientras los sidebars mantienen un tamaño fijo.</p>
+                <br>
+
+                <a href="flexbox5.html"><b>Archivo 5:</b> Propiedades de los elementos hijos <a>
+            </div>
+        
+            <div class="exercise-card">
+                <h2>Conclusión</h2>
+                    <p>Flexbox es una herramienta poderosa que simplifica enormemente el diseño web. Con solo unas pocas propiedades, puedo crear layouts complejos, responsivos y visualmente atractivos sin complicaciones. 
+                    </p>
+            </div>
+        </div>
+        <footer>
+        <p> @IDAI       @Angel Fernando Pérez García :p      @ </p>
+    </footer>
+    </div>
+    
+</body>
+</html>
